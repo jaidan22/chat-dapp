@@ -12,11 +12,11 @@ const Message = () => {
     "Messages",
     (query) =>
       query
-        .ascending("createdAt"),
-        // .greaterThan(
-        //   "createdAt",
-        //   new Date(Date.now() - 1000 * 60 * MINS_DURATION)
-        // ),
+        .ascending("createdAt")
+        .greaterThan(
+          "createdAt",
+          new Date(Date.now() - 1000 * 60 * MINS_DURATION)
+        ),
     [],
     {
       live: true,
